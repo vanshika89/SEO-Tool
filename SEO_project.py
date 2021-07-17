@@ -28,7 +28,7 @@ if m :
     soup = bs4.BeautifulSoup(V,'html.parser')
     for script in soup(['script','style']):
         script.extract()
-    text = soup.get_text()
+        text = soup.get_text()
 
 # Geting the lines form parsed data.
     lines = (line.strip() for line in text.split())
